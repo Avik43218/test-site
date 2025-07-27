@@ -100,7 +100,7 @@
             // Wait 1s for possible user interaction
             await new Promise(resolve => setTimeout(resolve, 500));
 
-            if (!this.entropy.mouseMoved && !this.entropy.touchDetected) {
+            if (this.entropy.mouseMoved && this.entropy.touchDetected) {
                 this.suspicious.push("no human input");
             }
 
